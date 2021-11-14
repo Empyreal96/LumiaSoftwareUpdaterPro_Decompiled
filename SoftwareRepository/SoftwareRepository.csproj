@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\SoftwareRepository.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11A42D33-DD37-4CE4-B79A-110FF130D4AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>SoftwareRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>2.1.5.19959</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>SoftwareRepository</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Diagnostics.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="ReportException.cs" />
+    <Compile Include="DownloadException.cs" />
+    <Compile Include="DiscoveryException.cs" />
+    <Compile Include="Streaming\ChunkState.cs" />
+    <Compile Include="Streaming\ChunkManager.cs" />
+    <Compile Include="Streaming\DownloadMetadata.cs" />
+    <Compile Include="Streaming\DownloadReadyEventHandler.cs" />
+    <Compile Include="Streaming\BestUrlSelectionEventHandler.cs" />
+    <Compile Include="Streaming\Downloader.cs" />
+    <Compile Include="Streaming\DownloadProgress`1.cs" />
+    <Compile Include="Streaming\DownloadReadyEventArgs.cs" />
+    <Compile Include="Streaming\DownloadProgressInfo.cs" />
+    <Compile Include="Streaming\UrlSelectionResult.cs" />
+    <Compile Include="Streaming\UrlResult.cs" />
+    <Compile Include="Streaming\FileStreamer.cs" />
+    <Compile Include="Streaming\DownloadProgressEventHandler.cs" />
+    <Compile Include="Streaming\DownloadChunk.cs" />
+    <Compile Include="Streaming\FileUrlResult.cs" />
+    <Compile Include="Streaming\Streamer.cs" />
+    <Compile Include="Streaming\MemoryStreamer.cs" />
+    <Compile Include="Reporting\ReportUploadLocationParameters.cs" />
+    <Compile Include="Reporting\Reporter.cs" />
+    <Compile Include="Reporting\DownloadReport.cs" />
+    <Compile Include="Discovery\DiscoveryCondition.cs" />
+    <Compile Include="Discovery\Discoverer.cs" />
+    <Compile Include="Discovery\DiscoveryJsonResult.cs" />
+    <Compile Include="Discovery\DiscoveryQueryParameters.cs" />
+    <Compile Include="Discovery\DiscoveryResult.cs" />
+    <Compile Include="Discovery\DiscoveryParameters.cs" />
+    <Compile Include="Discovery\ExtendedAttributes.cs" />
+    <Compile Include="Discovery\SoftwareFile.cs" />
+    <Compile Include="Discovery\SoftwareFileChecksum.cs" />
+    <Compile Include="Discovery\SoftwarePackage.cs" />
+    <Compile Include="Discovery\SoftwarePackages.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

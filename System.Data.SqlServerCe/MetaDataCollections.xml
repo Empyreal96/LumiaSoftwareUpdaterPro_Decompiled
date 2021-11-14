@@ -1,0 +1,204 @@
+<?xml version="1.0" standalone="yes"?>
+<Schema>
+    <xs:schema id="Schema" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:element name="Schema" msdata:IsDataSet="true" msdata:MainDataTable="MetaDataCollections" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="MetaDataCollections" msdata:Locale="">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="CollectionName" type="xs:string" minOccurs="0" />
+                                <xs:element name="NumberOfRestrictions" type="xs:int" minOccurs="0" />
+                                <xs:element name="NumberOfIdentifierParts" type="xs:int" minOccurs="0" />
+                                <xs:element name="PopulationMechanism" type="xs:string" minOccurs="0" />
+                                <xs:element name="PopulationString" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+
+    <!-- MetadataCollections -->
+    <MetaDataCollections>
+        <CollectionName>MetaDataCollections</CollectionName>
+        <NumberOfRestrictions>0</NumberOfRestrictions>
+        <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+        <PopulationMechanism>CustomCollection</PopulationMechanism>
+        <PopulationString></PopulationString>
+    </MetaDataCollections>
+    <!-- DataSourceInformation -->
+    <MetaDataCollections>
+        <CollectionName>DataSourceInformation</CollectionName>
+        <NumberOfRestrictions>0</NumberOfRestrictions>
+        <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+        <PopulationMechanism>CustomCollection</PopulationMechanism>
+        <PopulationString>DataSourceInformation.xml</PopulationString>
+    </MetaDataCollections>
+    <!-- DataTypes -->
+    <MetaDataCollections>
+        <CollectionName>DataTypes</CollectionName>
+        <NumberOfRestrictions>0</NumberOfRestrictions>
+        <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+        <PopulationMechanism>CustomCollection</PopulationMechanism>
+        <PopulationString>
+            select
+            TYPE_NAME as TypeName,
+            cast (DATA_TYPE as int) as ProviderDbType,
+            COLUMN_SIZE as ColumnSize,
+            '' as CreateFormat,
+            CREATE_PARAMS as CreateParameters,
+            '' as DataType,
+            AUTO_UNIQUE_VALUE as IsAutoincrementable,
+            BEST_MATCH as IsBestMatch,
+            CASE_SENSITIVE as IsCaseSensitive,
+            IS_FIXEDLENGTH as IsFixedLength,
+            FIXED_PREC_SCALE as IsFixedPrecisionScale ,
+            IS_LONG as IsLong,
+            IS_NULLABLE as IsNullable,
+            Case when SEARCHABLE = 4 or SEARCHABLE = 3 then cast(1 as bit) else cast(0 as bit) end as IsSearchable,
+            Case when SEARCHABLE = 4 or SEARCHABLE = 2 then cast(1 as bit) else cast(0 as bit) end as IsSearchableWithLike ,
+            UNSIGNED_ATTRIBUTE as IsUnsigned,
+            MAXIMUM_SCALE as MaximumScale,
+            MINIMUM_SCALE as MinimumScale ,
+            CASE WHEN TYPE_NAME = 'rowversion' THEN CAST(1 as bit) ELSE CAST(0 as bit) END as IsConcurrencyType ,
+            CAST(null as BIT) as IsLiteralsSupported ,
+            LITERAL_PREFIX as LiteralPrefix ,
+            LITERAL_SUFFIX as LiteralSuffix ,
+            LOCAL_TYPE_NAME as NativeDataType
+            from Information_Schema.Provider_Types
+        </PopulationString>
+    </MetaDataCollections>
+    <!-- Restrictions -->
+    <MetaDataCollections>
+        <CollectionName>Restrictions</CollectionName>
+        <NumberOfRestrictions>0</NumberOfRestrictions>
+        <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+        <PopulationMechanism>XMLResource</PopulationMechanism>
+        <PopulationString>Restrictions.xml</PopulationString>
+    </MetaDataCollections>
+    <!-- ReservedWords -->
+    <MetaDataCollections>
+        <CollectionName>ReservedWords</CollectionName>
+        <NumberOfRestrictions>0</NumberOfRestrictions>
+        <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+        <PopulationMechanism>XMLResource</PopulationMechanism>
+        <PopulationString>ReservedWords.xml</PopulationString>
+    </MetaDataCollections>
+
+    <!-- Tables -->
+    <MetaDataCollections>
+        <CollectionName>Tables</CollectionName>
+        <NumberOfRestrictions>4</NumberOfRestrictions>
+        <NumberOfIdentifierParts>1</NumberOfIdentifierParts>
+        <PopulationMechanism>SQLStatement</PopulationMechanism>
+        <PopulationString>
+            select
+            TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE
+            from
+            INFORMATION_SCHEMA.TABLES
+            where
+            (@Catalog = TABLE_CATALOG or (@Catalog is null)) and
+            (@Owner = TABLE_SCHEMA or (@Owner is null)) and
+            (@Table = TABLE_NAME or (@Table is null)) and
+            (@TableType = TABLE_TYPE or (@TableType is null))
+            order by
+            TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME
+        </PopulationString>
+    </MetaDataCollections>
+    <!-- Columns -->
+    <MetaDataCollections>
+        <CollectionName>Columns</CollectionName>
+        <NumberOfRestrictions>4</NumberOfRestrictions>
+        <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+        <PopulationMechanism>SQLStatement</PopulationMechanism>
+        <PopulationString>
+            select
+            TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME,
+            ORDINAL_POSITION, COLUMN_DEFAULT, IS_NULLABLE, DATA_TYPE,
+            CHARACTER_MAXIMUM_LENGTH, CHARACTER_OCTET_LENGTH, NUMERIC_PRECISION,
+            NUMERIC_SCALE, DATETIME_PRECISION, CHARACTER_SET_CATALOG,
+            CHARACTER_SET_SCHEMA, CHARACTER_SET_NAME, COLLATION_CATALOG
+            from
+            INFORMATION_SCHEMA.COLUMNS
+            where
+            (TABLE_CATALOG = @Catalog or (@Catalog is null)) and
+            (TABLE_SCHEMA = @Owner or (@Owner is null)) and
+            (TABLE_NAME = @Table or (@Table is null)) and
+            (COLUMN_NAME = @Column or (@Column is null))
+            order by
+            TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME
+        </PopulationString>
+    </MetaDataCollections>
+    <!-- Indexes -->
+    <MetaDataCollections>
+        <CollectionName>Indexes</CollectionName>
+        <NumberOfRestrictions>4</NumberOfRestrictions>
+        <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+        <PopulationMechanism>SQLStatement</PopulationMechanism>
+        <PopulationString>
+            select Distinct
+            TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME,
+            INDEX_CATALOG, INDEX_SCHEMA, INDEX_NAME
+            from
+            INFORMATION_SCHEMA.Indexes
+            where
+            (INDEX_CATALOG = @Catalog or (@Catalog is null)) and
+            (INDEX_SCHEMA = @Owner or (@Owner is null)) and
+            (TABLE_NAME = @Table or (@Table is null)) and
+            (INDEX_NAME = @Name or (@Name is null))
+            order by
+            TABLE_NAME, INDEX_NAME
+        </PopulationString>
+    </MetaDataCollections>
+    <!-- IndexColumns -->
+    <MetaDataCollections>
+        <CollectionName>IndexColumns</CollectionName>
+        <NumberOfRestrictions>5</NumberOfRestrictions>
+        <NumberOfIdentifierParts>3</NumberOfIdentifierParts>
+        <PopulationMechanism>SQLStatement</PopulationMechanism>
+        <PopulationString>
+            select
+            TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME,
+            INDEX_CATALOG, INDEX_SCHEMA, INDEX_NAME,
+            COLUMN_NAME, ORDINAL_POSITION
+            from
+            INFORMATION_SCHEMA.Indexes
+            where
+            (INDEX_CATALOG = @Catalog or (@Catalog is null)) and
+            (INDEX_SCHEMA = @Owner or (@Owner is null)) and
+            (TABLE_NAME = @Table or (@Table is null)) and
+            (INDEX_NAME = @Index or (@Index is null)) and
+            (COLUMN_NAME = @Column or (@Column is null))
+            order by
+            TABLE_NAME, INDEX_NAME, COLUMN_NAME
+        </PopulationString>
+    </MetaDataCollections>
+    <!-- ForienKeys -->
+    <MetaDataCollections>
+        <CollectionName>ForeignKeys</CollectionName>
+        <NumberOfRestrictions>4</NumberOfRestrictions>
+        <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+        <PopulationMechanism>SQLStatement</PopulationMechanism>
+        <PopulationString>
+            select
+            CONSTRAINT_CATALOG, CONSTRAINT_SCHEMA, CONSTRAINT_NAME,
+            CAST(NULL as nvarchar) as TABLE_CATALOG,
+            CAST(NULL as nvarchar) as TABLE_SCHEMA,
+            CONSTRAINT_TABLE_NAME as TABLE_NAME,
+            'FOREIGN KEY' as CONSTRAINT_TYPE,
+            'NO' as IS_DEFERRABLE,
+            'NO' as INITIALLY_DEFERRED
+            from
+            INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS
+            where
+            (CONSTRAINT_CATALOG = @Catalog or (@Catalog is null)) and
+            (CONSTRAINT_SCHEMA = @Owner or (@Owner is null)) and
+            (CONSTRAINT_TABLE_NAME = @Table or (@Table is null)) and
+            (CONSTRAINT_NAME = @Constraint or (@Constraint is null))
+            order by
+            CONSTRAINT_CATALOG, CONSTRAINT_SCHEMA, CONSTRAINT_NAME
+        </PopulationString>
+    </MetaDataCollections>
+</Schema>

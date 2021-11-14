@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\System.Data.SqlServerCe.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A6DF470-6F50-4ACF-ACB0-7A894EC2512E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>System.Data.SqlServerCe</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>4.0.0.1</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>System.Data.SqlServerCe</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlCeUtil.cs" />
+    <Compile Include="SqlCeServicing.cs" />
+    <Compile Include="CommonUtils.cs" />
+    <Compile Include="ConStringUtil.cs" />
+    <Compile Include="KeywordMapper.cs" />
+    <Compile Include="Keywords.cs" />
+    <Compile Include="ResCategoryAttribute.cs" />
+    <Compile Include="ResDescriptionAttribute.cs" />
+    <Compile Include="SqlCeConnectionStringDefaults.cs" />
+    <Compile Include="SqlCeConnectionStringBuilder.cs" />
+    <Compile Include="SqlCeConnectionStringKeywords.cs" />
+    <Compile Include="SqlCeConnectionStringSynonyms.cs" />
+    <Compile Include="ADP.cs" />
+    <Compile Include="SqlCeInfoSchemaColumn.cs" />
+    <Compile Include="KeyValuePairsEnumerator`2.cs" />
+    <Compile Include="SqlCeTableColumns.cs" />
+    <Compile Include="RowView.cs" />
+    <Compile Include="TrackingOptions.cs" />
+    <Compile Include="TrackingKeyType.cs" />
+    <Compile Include="PurgeType.cs" />
+    <Compile Include="TrackingVersion.cs" />
+    <Compile Include="SqlCeChangeTracking.cs" />
+    <Compile Include="RepairOption.cs" />
+    <Compile Include="VerifyOption.cs" />
+    <Compile Include="SqlCeEngine.cs" />
+    <Compile Include="SqlCeCommand.cs" />
+    <Compile Include="SqlCeCommandBuilder.cs" />
+    <Compile Include="SqlCeConnection.cs" />
+    <Compile Include="WeakReferenceCache.cs" />
+    <Compile Include="CursorPosition.cs" />
+    <Compile Include="SqlCeDataReader.cs" />
+    <Compile Include="SqlCeParameter.cs" />
+    <Compile Include="SqlCeParameterCollection.cs" />
+    <Compile Include="CommitMode.cs" />
+    <Compile Include="SqlCeTransaction.cs" />
+    <Compile Include="SqlCeType.cs" />
+    <Compile Include="SqlCeUpdatableRecord.cs" />
+    <Compile Include="SqlCeResultSet.cs" />
+    <Compile Include="ColumnUpdatedStatus.cs" />
+    <Compile Include="ChangeType.cs" />
+    <Compile Include="ResultSetChangedEventArgs.cs" />
+    <Compile Include="ResultSetChangedEventHandler.cs" />
+    <Compile Include="RdaTrackOption.cs" />
+    <Compile Include="RdaBatchOption.cs" />
+    <Compile Include="SqlCeRemoteDataAccess.cs" />
+    <Compile Include="AddOption.cs" />
+    <Compile Include="DropOption.cs" />
+    <Compile Include="NetworkType.cs" />
+    <Compile Include="SecurityType.cs" />
+    <Compile Include="ExchangeType.cs" />
+    <Compile Include="ValidateType.cs" />
+    <Compile Include="SnapshotTransferType.cs" />
+    <Compile Include="SyncStatus.cs" />
+    <Compile Include="OnStartTableUpload.cs" />
+    <Compile Include="OnStartTableDownload.cs" />
+    <Compile Include="OnSynchronization.cs" />
+    <Compile Include="SyncAsyncResult.cs" />
+    <Compile Include="SqlCeReplication.cs" />
+    <Compile Include="SqlCeError.cs" />
+    <Compile Include="DbRangeOptions.cs" />
+    <Compile Include="DbSeekOptions.cs" />
+    <Compile Include="DbInsertOptions.cs" />
+    <Compile Include="DbColumnFlags.cs" />
+    <Compile Include="SORTFLAGS.cs" />
+    <Compile Include="SeTransactionFlags.cs" />
+    <Compile Include="DBStatus.cs" />
+    <Compile Include="ENCRYPTIONMODE.cs" />
+    <Compile Include="MEOPENINFO.cs" />
+    <Compile Include="MEDBBINDING.cs" />
+    <Compile Include="MEDBKEYINFO.cs" />
+    <Compile Include="tagDBOBJECT.cs" />
+    <Compile Include="DB_NUMERIC.cs" />
+    <Compile Include="DBTIMESTAMP.cs" />
+    <Compile Include="SEDATETIME.cs" />
+    <Compile Include="SEPREPAREMODE.cs" />
+    <Compile Include="SETYPE.cs" />
+    <Compile Include="SEFIXOPTION.cs" />
+    <Compile Include="SEOPENFLAGS.cs" />
+    <Compile Include="SELOCALEFLAGS.cs" />
+    <Compile Include="SEISOLATION.cs" />
+    <Compile Include="SEGETCOLUMN.cs" />
+    <Compile Include="SECOLUMNATTRIB.cs" />
+    <Compile Include="SECOLUMNINFO.cs" />
+    <Compile Include="SETABLEATTRIBOPS.cs" />
+    <Compile Include="SETABLEATTRIBS.cs" />
+    <Compile Include="SEOCSTRACKOPTIONS.cs" />
+    <Compile Include="SEOCSTRACKOPTIONSV2.cs" />
+    <Compile Include="SETABLEINFO.cs" />
+    <Compile Include="SETRACKINGTYPE.cs" />
+    <Compile Include="QPPARAMTYPE.cs" />
+    <Compile Include="QPPARAMINFO.cs" />
+    <Compile Include="FETCH.cs" />
+    <Compile Include="DIRECTION.cs" />
+    <Compile Include="MetaData.cs" />
+    <Compile Include="ValueMapper.cs" />
+    <Compile Include="FlushFailureEventHandler.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="NativeMethodsHelper.cs" />
+    <Compile Include="UnmanagedLibraryHelper.cs" />
+    <Compile Include="WinTrust.cs" />
+    <Compile Include="SqlCeException.cs" />
+    <Compile Include="SqlCeLockTimeoutException.cs" />
+    <Compile Include="SqlCeTransactionInProgressException.cs" />
+    <Compile Include="SqlCeInvalidDatabaseFormatException.cs" />
+    <Compile Include="SqlCeInfoMessageEventHandler.cs" />
+    <Compile Include="SqlCeRowUpdatedEventHandler.cs" />
+    <Compile Include="SqlCeFlushFailureEventHandler.cs" />
+    <Compile Include="SqlCeRowUpdatedEventArgs.cs" />
+    <Compile Include="SqlCeRowUpdatingEventHandler.cs" />
+    <Compile Include="SqlCeInfoMessageEventArgs.cs" />
+    <Compile Include="SqlCeFlushFailureEventArgs.cs" />
+    <Compile Include="SqlCeErrorCollection.cs" />
+    <Compile Include="SqlCeDataAdapter.cs" />
+    <Compile Include="SqlCeRowUpdatingEventArgs.cs" />
+    <Compile Include="ResultSetView.cs" />
+    <Compile Include="DataColumnPropertyDescriptor.cs" />
+    <Compile Include="ResultSetEnumerator.cs" />
+    <Compile Include="ResultSetOptions.cs" />
+    <Compile Include="ResultSetSensitivity.cs" />
+    <Compile Include="FieldNameLookup.cs" />
+    <Compile Include="SqlMetaData.cs" />
+    <Compile Include="SqlCeProviderFactory.cs" />
+    <Compile Include="SqlCeRestriction.cs" />
+    <Compile Include="SqlCeDelegatedTransaction.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="SchemaCollections.cs" />
+    <Compile Include="HashProvider.cs" />
+    <Compile Include="KillBitHelper.cs" />
+    <Compile Include="CspSafeHandle.cs" />
+    <Compile Include="HashSafeHandle.cs" />
+    <Compile Include="SqlCeSHA256.cs" />
+    <Compile Include="SqlCeVersion.cs" />
+    <Compile Include="Res.cs" />
+    <Compile Include="Accessor.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataSourceInformation.xml" />
+    <EmbeddedResource Include="MetaDataCollections.xml" />
+    <EmbeddedResource Include="ReservedWords.xml" />
+    <EmbeddedResource Include="Restrictions.xml" />
+    <EmbeddedResource Include="System\Data\SqlServerCe.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

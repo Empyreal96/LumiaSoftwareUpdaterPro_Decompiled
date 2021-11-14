@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FORMAT_SPEED" xml:space="preserve">
+    <value>({0:0.00} MB/s)</value>
+  </data>
+  <data name="DEVICE_NO" xml:space="preserve">
+    <value>[Device {0,2}]</value>
+  </data>
+  <data name="DEVICE_ID" xml:space="preserve">
+    <value>Device ID currently: {0}</value>
+  </data>
+  <data name="STATUS_FLASHING" xml:space="preserve">
+    <value>Status : FLASHING</value>
+  </data>
+  <data name="ERROR_RESET_BOOT_MODE" xml:space="preserve">
+    <value>Failed to reset to specified boot mode. Error {0}</value>
+  </data>
+  <data name="ERRORS" xml:space="preserve">
+    <value>ERRORS
+======</value>
+  </data>
+  <data name="REMOVE_PLATFORM_ID" xml:space="preserve">
+    <value>Success, device removed platform ID info. ID now: {0}</value>
+  </data>
+  <data name="RESET_BOOT_MODE" xml:space="preserve">
+    <value>Success, device resetting to specified boot mode.</value>
+  </data>
+  <data name="ERROR_FILE_NOT_FOUND" xml:space="preserve">
+    <value>Could not locate {0}, please verify that the file specified is accessible.</value>
+  </data>
+  <data name="WIM_TRANSFER_RATE" xml:space="preserve">
+    <value>WIM transfer completed in {0} seconds.</value>
+  </data>
+  <data name="ERROR_TIMED_OUT" xml:space="preserve">
+    <value>A wait timed out: </value>
+  </data>
+  <data name="STATUS_DONE" xml:space="preserve">
+    <value>Status : DONE</value>
+  </data>
+  <data name="FORCE_OPTION_DEPRECATED" xml:space="preserve">
+    <value>WARNING: Use of -force no longer has any effect.</value>
+  </data>
+  <data name="ERROR_UNEXPECTED_DEVICESTATUS" xml:space="preserve">
+    <value>Unexpected DeviceStatus</value>
+  </data>
+  <data name="TRANSFER_STATISTICS" xml:space="preserve">
+    <value>Transferred {0:0.00} MB in {1:0.00} seconds, overall rate {2:0.00} MB/s.</value>
+  </data>
+  <data name="ERROR_BOOT_WIM" xml:space="preserve">
+    <value>Failed to boot specified WIM.  Please ensure the device supports this operation.</value>
+  </data>
+  <data name="SERIAL_NO_FORMAT" xml:space="preserve">
+    <value>{0,-10} : {1,3}</value>
+  </data>
+  <data name="ERROR_SKIP_TRANSFER" xml:space="preserve">
+    <value>Failed to skip transfer.</value>
+  </data>
+  <data name="STATUS_ERROR" xml:space="preserve">
+    <value>Status : ERROR - Please refer below for more details</value>
+  </data>
+  <data name="ERROR_NO_PLATFORM_ID" xml:space="preserve">
+    <value>No platform ID override info cleared.</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID     : {0}</value>
+  </data>
+  <data name="USAGE" xml:space="preserve">
+    <value>Usage: FFUTool -flash &lt;path to FFU file to apply to disk&gt; [path to flashing WIM]
+       FFUTool -uefiflash &lt;path to FFU, flashed from UEFI directly&gt;
+       FFUTool -fastflash &lt;path to FFU, flashed from UEFI directly&gt;
+       FFUTool -wim &lt;path to WIM to boot from RAM&gt;
+       FFUTool -skip
+       FFUTool -list
+       FFUTool -massStorage
+       FFUTool -clearId
+       FFUTool -serial
+       FFUTool -setBootMode &lt;boot mode&gt; &lt;optional profile name&gt;</value>
+  </data>
+  <data name="SERIAL_NO" xml:space="preserve">
+    <value>Serial No.</value>
+  </data>
+  <data name="STATUS_CONNECTED" xml:space="preserve">
+    <value>Status : CONNECTED</value>
+  </data>
+  <data name="ERROR_AT_LEAST_ONE_DEVICE_FAILED" xml:space="preserve">
+    <value>At least one of the devices failed to execute the operation.</value>
+  </data>
+  <data name="STATUS_SKIPPING" xml:space="preserve">
+    <value>Status : SKIPPING</value>
+  </data>
+  <data name="ERROR_WIM_BOOT" xml:space="preserve">
+    <value>WIM boot failed.  Please reset your device and use "ffutool -uefiFlash" to flash your image.</value>
+  </data>
+  <data name="STATUS_BOOTING_TO_WIM" xml:space="preserve">
+    <value>Status : BOOTING WIM</value>
+  </data>
+  <data name="STATUS_SKIPPED" xml:space="preserve">
+    <value>Status : SKIPPED</value>
+  </data>
+  <data name="NO_CONNECTED_DEVICES" xml:space="preserve">
+    <value>
+There are no connected devices.</value>
+  </data>
+  <data name="ERROR_RESET_MASS_STORAGE_MODE" xml:space="preserve">
+    <value>Failed to reset to mass storage mode.</value>
+  </data>
+  <data name="BOOTING_WIM" xml:space="preserve">
+    <value>Booting WIM: {0:s}</value>
+  </data>
+  <data name="ERROR_FFU" xml:space="preserve">
+    <value>An FFU error occurred: </value>
+  </data>
+  <data name="ERROR_MORE_THAN_ONE_DEVICE" xml:space="preserve">
+    <value>One connected device is expected in order to flash, {0} found.</value>
+  </data>
+  <data name="RESET_MASS_STORAGE_MODE" xml:space="preserve">
+    <value>Success, device resetting to mass storage mode.</value>
+  </data>
+  <data name="DEVICES_FOUND" xml:space="preserve">
+    <value>
+Devices Found: {0}</value>
+  </data>
+  <data name="LOGGING_TO_ETL" xml:space="preserve">
+    <value>Logging to ETL file: {0:s}</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Name   : {0}</value>
+  </data>
+</root>

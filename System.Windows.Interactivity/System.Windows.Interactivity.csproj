@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\System.Windows.Interactivity.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBD76983-B9F8-4426-A146-A160282AC955}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>System.Windows.Interactivity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>4.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>System.Windows.Interactivity</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="Microsoft\Expression\BlendSDK\RuntimeVersion.cs" />
+    <Compile Include="Microsoft\Expression\BlendSDK\VersionConstants.cs" />
+    <Compile Include="IAttachedObject.cs" />
+    <Compile Include="AttachableCollection`1.cs" />
+    <Compile Include="Behavior.cs" />
+    <Compile Include="Behavior`1.cs" />
+    <Compile Include="BehaviorCollection.cs" />
+    <Compile Include="CustomPropertyValueEditor.cs" />
+    <Compile Include="CustomPropertyValueEditorAttribute.cs" />
+    <Compile Include="DefaultTriggerAttribute.cs" />
+    <Compile Include="DependencyObjectHelper.cs" />
+    <Compile Include="EventObserver.cs" />
+    <Compile Include="TriggerBase.cs" />
+    <Compile Include="EventTriggerBase.cs" />
+    <Compile Include="EventTriggerBase`1.cs" />
+    <Compile Include="EventTrigger.cs" />
+    <Compile Include="Interaction.cs" />
+    <Compile Include="TriggerAction.cs" />
+    <Compile Include="TriggerAction`1.cs" />
+    <Compile Include="InvokeCommandAction.cs" />
+    <Compile Include="NameResolvedEventArgs.cs" />
+    <Compile Include="NameResolver.cs" />
+    <Compile Include="TargetedTriggerAction.cs" />
+    <Compile Include="TargetedTriggerAction`1.cs" />
+    <Compile Include="TriggerActionCollection.cs" />
+    <Compile Include="TriggerBase`1.cs" />
+    <Compile Include="PreviewInvokeEventArgs.cs" />
+    <Compile Include="TriggerCollection.cs" />
+    <Compile Include="TypeConstraintAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionStringTable.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

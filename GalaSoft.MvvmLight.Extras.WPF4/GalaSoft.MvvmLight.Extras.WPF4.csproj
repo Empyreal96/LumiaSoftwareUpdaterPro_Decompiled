@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\GalaSoft.MvvmLight.Extras.WPF4.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD23B7F0-00AB-4BA3-AD91-ACF4ECDDB338}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>GalaSoft.MvvmLight.Extras.WPF4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>4.0.23.37706</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GalaSoft\MvvmLight\Command\EventToCommand.cs" />
+    <Compile Include="GalaSoft\MvvmLight\Ioc\ISimpleIoc.cs" />
+    <Compile Include="GalaSoft\MvvmLight\Ioc\PreferredConstructorAttribute.cs" />
+    <Compile Include="GalaSoft\MvvmLight\Ioc\SimpleIoc.cs" />
+    <Compile Include="GalaSoft\MvvmLight\Properties\Resources.cs" />
+    <Compile Include="GalaSoft\MvvmLight\Converters\UniversalConverter.cs" />
+    <Compile Include="System\Linq\Expressions\DynamicQueryable.cs" />
+    <Compile Include="System\Linq\Expressions\DynamicClass.cs" />
+    <Compile Include="System\Linq\Expressions\DynamicProperty.cs" />
+    <Compile Include="System\Linq\Expressions\DynamicExpressionEx.cs" />
+    <Compile Include="System\Linq\Expressions\DynamicOrdering.cs" />
+    <Compile Include="System\Linq\Expressions\Signature.cs" />
+    <Compile Include="System\Linq\Expressions\ClassFactory.cs" />
+    <Compile Include="System\Linq\Expressions\ParseException.cs" />
+    <Compile Include="System\Linq\Expressions\ExpressionParser.cs" />
+    <Compile Include="System\Linq\Expressions\Res.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GalaSoft\MvvmLight\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

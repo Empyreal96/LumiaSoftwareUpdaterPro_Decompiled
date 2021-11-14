@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\Wp8OemFlasher.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5478C53D-8325-4B74-962B-0C1F55C5A3E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Wp8OemFlasher</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>16.5.3001.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.LsuPro</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonClasses">
+      <HintPath>lib\CommonClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="FFUComponents">
+      <HintPath>lib\FFUComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiaConnectivity">
+      <HintPath>lib\LumiaConnectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Lucid">
+      <HintPath>lib\Nokia.Lucid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OemFlasherResult.cs" />
+    <Compile Include="OemFlashCompletedEventArgs.cs" />
+    <Compile Include="OemFlasherLogWriter.cs" />
+    <Compile Include="OemFlashStartedEventArgs.cs" />
+    <Compile Include="OemDeviceDetectionEventArgs.cs" />
+    <Compile Include="OemFlasher.cs" />
+    <Compile Include="OemFlasherDeviceMap.cs" />
+    <Compile Include="OemFlasherDetector.cs" />
+    <Compile Include="OemFlashProgressEventArgs.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

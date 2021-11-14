@@ -1,0 +1,85 @@
+<UserControl x:Class="Microsoft.LsuPro.SharedControls.PleaseWaitControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             IsVisibleChanged="PleaseWaitControlOnIsVisibleChanged" x:Name="PleaseWaitControlName"
+             VerticalAlignment="Center">
+  <FrameworkElement.Resources>
+    <Color x:Key="heavyColor">#FFFFFFFF</Color>
+    <PathGeometry x:Key="Path">
+      <PathFigure IsClosed="false" StartPoint="0,32">
+        <LineSegment Point="0,11"/>
+        <ArcSegment Point="11,0" Size="13,13" SweepDirection="Clockwise"/>
+        <ArcSegment Point="23,11" Size="13,13" SweepDirection="Clockwise"/>
+        <ArcSegment Point="11,23" Size="13,13" SweepDirection="Clockwise"/>
+        <ArcSegment Point="0,11" Size="13,13" SweepDirection="Clockwise"/>
+        <ArcSegment Point="11,0" Size="13,13" SweepDirection="Clockwise"/>
+        <ArcSegment Point="23,11" Size="13,13" SweepDirection="Clockwise"/>
+        <LineSegment Point="23,32"/>
+      </PathFigure>
+    </PathGeometry>
+    <Storyboard x:Key="EllipsesAnimation">
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse1" Storyboard.TargetProperty="(Canvas.Left)"
+                                PathGeometry="{StaticResource Path}" BeginTime="0:0:0.18" Duration="0:0:2.5"
+                                RepeatBehavior="Forever" AutoReverse="false" Source="X" AccelerationRatio="0.4"
+                                DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse1" Storyboard.TargetProperty="(Canvas.Top)"
+                                PathGeometry="{StaticResource Path}" BeginTime="0:0:0.18" Duration="0:0:2.5"
+                                RepeatBehavior="Forever" AutoReverse="false" Source="Y" AccelerationRatio="0.4"
+                                DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse2" Storyboard.TargetProperty="(Canvas.Left)"
+                                PathGeometry="{StaticResource Path}" BeginTime="0:0:0.12" Duration="0:0:2.5"
+                                RepeatBehavior="Forever" AutoReverse="false" Source="X" AccelerationRatio="0.4"
+                                DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse2" Storyboard.TargetProperty="(Canvas.Top)"
+                                PathGeometry="{StaticResource Path}" BeginTime="0:0:0.12" Duration="0:0:2.5"
+                                RepeatBehavior="Forever" AutoReverse="false" Source="Y" AccelerationRatio="0.4"
+                                DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse3" Storyboard.TargetProperty="(Canvas.Left)"
+                                PathGeometry="{StaticResource Path}" BeginTime="0:0:0.06" Duration="0:0:2.5"
+                                RepeatBehavior="Forever" AutoReverse="false" Source="X" AccelerationRatio="0.4"
+                                DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse3" Storyboard.TargetProperty="(Canvas.Top)"
+                                PathGeometry="{StaticResource Path}" BeginTime="0:0:0.06" Duration="0:0:2.5"
+                                RepeatBehavior="Forever" AutoReverse="false" Source="Y" AccelerationRatio="0.4"
+                                DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse4" Storyboard.TargetProperty="(Canvas.Left)"
+                                PathGeometry="{StaticResource Path}" Duration="0:0:2.5" RepeatBehavior="Forever"
+                                AutoReverse="false" Source="X" AccelerationRatio="0.4" DecelerationRatio="0.6"/>
+      <DoubleAnimationUsingPath Storyboard.TargetName="Ellipse4" Storyboard.TargetProperty="(Canvas.Top)"
+                                PathGeometry="{StaticResource Path}" Duration="0:0:2.5" RepeatBehavior="Forever"
+                                AutoReverse="false" Source="Y" AccelerationRatio="0.4" DecelerationRatio="0.6"/>
+    </Storyboard>
+  </FrameworkElement.Resources>
+  <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+    <Canvas Margin="0" Width="32" Height="28" ClipToBounds="true" VerticalAlignment="Center">
+      <Ellipse x:Name="Ellipse1" Width="5" Height="5" Canvas.Left="10" Canvas.Top="50">
+        <Shape.Fill>
+          <SolidColorBrush Opacity="0.1"
+                           Color="{Binding Foreground.Color, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+        </Shape.Fill>
+      </Ellipse>
+      <Ellipse x:Name="Ellipse2" Width="5" Height="5" Canvas.Left="10" Canvas.Top="50">
+        <Shape.Fill>
+          <SolidColorBrush Opacity="0.4"
+                           Color="{Binding Foreground.Color, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+        </Shape.Fill>
+      </Ellipse>
+      <Ellipse x:Name="Ellipse3" Width="5" Height="5" Canvas.Left="10" Canvas.Top="50">
+        <Shape.Fill>
+          <SolidColorBrush Opacity="0.7"
+                           Color="{Binding Foreground.Color, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+        </Shape.Fill>
+      </Ellipse>
+      <Ellipse x:Name="Ellipse4" Width="5" Height="5" Canvas.Left="10" Canvas.Top="50">
+        <Shape.Fill>
+          <SolidColorBrush Opacity="1.0"
+                           Color="{Binding Foreground.Color, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+        </Shape.Fill>
+      </Ellipse>
+    </Canvas>
+    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" TextWrapping="Wrap"
+               Text="{Binding ElementName=PleaseWaitControlName, Path=Text}"/>
+  </StackPanel>
+</UserControl>

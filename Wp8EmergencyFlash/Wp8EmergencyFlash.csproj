@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\Wp8EmergencyFlash.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BC7314D-1C05-4ED4-948B-512B2453B23C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Wp8EmergencyFlash</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>16.5.3001.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.LsuPro</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonClasses">
+      <HintPath>lib\CommonClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Lucid">
+      <HintPath>lib\Nokia.Lucid.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineUpdatePackageManager">
+      <HintPath>lib\OnlineUpdatePackageManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlphaCollinsEmergencyFlashFiles.cs" />
+    <Compile Include="EmergencyModeDeviceEventArgs.cs" />
+    <Compile Include="EmergencyFlashProgressEventArgs.cs" />
+    <Compile Include="EmergencyFlashCompletedEventArgs.cs" />
+    <Compile Include="EngineType.cs" />
+    <Compile Include="EmergencyFlashType.cs" />
+    <Compile Include="EmergencyFileType.cs" />
+    <Compile Include="EmergencyFileInfo.cs" />
+    <Compile Include="EmergencyFileScanner.cs" />
+    <Compile Include="EmergencyFlashStage.cs" />
+    <Compile Include="EmergencyFlashFileSet.cs" />
+    <Compile Include="EmergencyFlasher.cs" />
+    <Compile Include="EmergencyDriverType.cs" />
+    <Compile Include="EmergencyModeDetector.cs" />
+    <Compile Include="QuattroEmergencyFlashFiles.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

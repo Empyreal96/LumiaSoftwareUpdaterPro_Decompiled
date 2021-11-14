@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\CommonClasses.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DE4211B-235A-4556-BBC0-6C48E576BB01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>CommonClasses</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>16.5.3001.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.LsuPro</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe">
+      <HintPath>lib\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UsbDeviceTracer.cs" />
+    <Compile Include="MemoryChecker.cs" />
+    <Compile Include="UsbHostControllerInfo.cs" />
+    <Compile Include="SystemInformation.cs" />
+    <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="SecureStringExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="DiskDriveInfo.cs" />
+    <Compile Include="FileInfoHelper.cs" />
+    <Compile Include="StreamWriterHelper.cs" />
+    <Compile Include="StreamReaderHelper.cs" />
+    <Compile Include="FileVersionInfoHelper.cs" />
+    <Compile Include="VersionComparerResult.cs" />
+    <Compile Include="VersionComparer.cs" />
+    <Compile Include="CommandLineParser.cs" />
+    <Compile Include="Tracer.cs" />
+    <Compile Include="TraceWriter.cs" />
+    <Compile Include="DirectoryHelper.cs" />
+    <Compile Include="PathHelper.cs" />
+    <Compile Include="SpecialFolders.cs" />
+    <Compile Include="TemporaryDirectory.cs" />
+    <Compile Include="NokiaNetwork.cs" />
+    <Compile Include="AdvancedNvItemParser.cs" />
+    <Compile Include="NvItemParameters.cs" />
+    <Compile Include="DataType.cs" />
+    <Compile Include="ComplexValue.cs" />
+    <Compile Include="DeviceRawData.cs" />
+    <Compile Include="NvItemDisplayInformation.cs" />
+    <Compile Include="JsonNvItem.cs" />
+    <Compile Include="NvItemDescriptionParser.cs" />
+    <Compile Include="ItemType.cs" />
+    <Compile Include="NvItemInformation.cs" />
+    <Compile Include="NvItemInterpreter.cs" />
+    <Compile Include="NvItemJsonConfiguration.cs" />
+    <Compile Include="NvItemJsonConfigurationParser.cs" />
+    <Compile Include="NvItemMember.cs" />
+    <Compile Include="NvItemParser.cs" />
+    <Compile Include="NvItemViewConfiguration.cs" />
+    <Compile Include="ValueConverter.cs" />
+    <Compile Include="XInclude.cs" />
+    <Compile Include="ReportData.cs" />
+    <Compile Include="Ext7Details.cs" />
+    <Compile Include="ReportDetails.cs" />
+    <Compile Include="FfuParsingException.cs" />
+    <Compile Include="FactoryResetFailedException.cs" />
+    <Compile Include="FlashException.cs" />
+    <Compile Include="FullNviUpdateNotSupportedException.cs" />
+    <Compile Include="PathConversionException.cs" />
+    <Compile Include="ProductCodeChangeNotSupportedException.cs" />
+    <Compile Include="RkhCheckException.cs" />
+    <Compile Include="SecureFlashAuthenticationException.cs" />
+    <Compile Include="SecureFlashHashException.cs" />
+    <Compile Include="SecureFlashPlatformIdException.cs" />
+    <Compile Include="SecureFlashProtocolNotSupportedException.cs" />
+    <Compile Include="SecureFlashSignatureException.cs" />
+    <Compile Include="Thor2ExitCode.cs" />
+    <Compile Include="Thor2ErrorType.cs" />
+    <Compile Include="UnfinishedDownloadsEventArgs.cs" />
+    <Compile Include="UnfinishedDownloadsInfo.cs" />
+    <Compile Include="UpdatePackageCleaner.cs" />
+    <Compile Include="UpdatePackageOs.cs" />
+    <Compile Include="UpdatePackageSw.cs" />
+    <Compile Include="DelegateCommand`1.cs" />
+    <Compile Include="FileStreamHelper.cs" />
+    <Compile Include="VariantSelectionCollectionViewSource.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="VplHelper.cs" />
+    <Compile Include="SqlSelectFilesCommand.cs" />
+    <Compile Include="SqlCommandBase.cs" />
+    <Compile Include="SqlInsertCommand.cs" />
+    <Compile Include="SqlSelectPackageCommand.cs" />
+    <Compile Include="SqlSimpleCommand.cs" />
+    <Compile Include="UpdatePackageFile.cs" />
+    <Compile Include="UpdatePackageProductTypeComparer.cs" />
+    <Compile Include="UpdatePackageProductCodeComparer.cs" />
+    <Compile Include="UpdatePackageSoftwareVersionComparer.cs" />
+    <Compile Include="UpdatePackageVariantVersionComparer.cs" />
+    <Compile Include="ComboBoxItemTemplateSelector.cs" />
+    <Compile Include="DropDownButton.cs" />
+    <Compile Include="FocusFirstBehavior.cs" />
+    <Compile Include="IsFocusedBehavior.cs" />
+    <Compile Include="NameValueViewModel.cs" />
+    <Compile Include="ThreadSafeObservableCollection`1.cs" />
+    <Compile Include="WindowBase.cs" />
+    <Compile Include="FileSystemSecurity.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="UpdatePackage.cs" />
+    <Compile Include="PasswordBoxBindingBehavior.cs" />
+    <Compile Include="WPF\FilteredComboBox.cs" />
+    <Compile Include="WPF\FilteredProductCodeComboBox.cs" />
+    <Compile Include="WPF\FilteredSoftwareVersionComboBox.cs" />
+    <Compile Include="WPF\SetFocusBehavior.cs" />
+    <Compile Include="Network\JsonLocationInfo.cs" />
+    <Compile Include="Network\CountryChecker.cs" />
+    <Compile Include="IO\FileSystemWatcherHelper.cs" />
+    <Compile Include="Helpers\BatteryChargeStatus.cs" />
+    <Compile Include="Helpers\ExecutionStates.cs" />
+    <Compile Include="Helpers\SystemPowerState.cs" />
+    <Compile Include="Helpers\ManagedPowerManagementHelper.cs" />
+    <Compile Include="Helpers\PowerManagementHelper.cs" />
+    <Compile Include="Helpers\DateComparer.cs" />
+    <Compile Include="Helpers\SerializableDictionary`2.cs" />
+    <Compile Include="Helpers\TcpTableCollection.cs" />
+    <Compile Include="Helpers\TcpRow.cs" />
+    <Compile Include="Helpers\ManagedIpHelper.cs" />
+    <Compile Include="Helpers\IpHelper.cs" />
+    <Compile Include="Helpers\ProcessComparer.cs" />
+    <Compile Include="Helpers\CommandLineProcess.cs" />
+    <Compile Include="Helpers\Toolkit.cs" />
+    <Compile Include="Helpers\NvIndexedItemReadSubscriptionId.cs" />
+    <Compile Include="Helpers\NvItemReadSubscriptionId.cs" />
+    <Compile Include="Helpers\NvReadData.cs" />
+    <Compile Include="Helpers\EfsReadData.cs" />
+    <Compile Include="Helpers\EfsReadResponse.cs" />
+    <Compile Include="Helpers\NvItemReadResponse.cs" />
+    <Compile Include="Helpers\EfsDataRead.cs" />
+    <Compile Include="Helpers\NvIndexedItemRead.cs" />
+    <Compile Include="Helpers\NvItemRead.cs" />
+    <Compile Include="Helpers\JsonEfsRequestParameters.cs" />
+    <Compile Include="Helpers\JsonRequestParameters.cs" />
+    <Compile Include="Helpers\JsonRpcRequest.cs" />
+    <Compile Include="Helpers\JsonRpcResponse.cs" />
+    <Compile Include="Helpers\ProcessHelper.cs" />
+    <Compile Include="Helpers\TaskHelper.cs" />
+    <Compile Include="Cryptography\CalculationProgressEventArgs.cs" />
+    <Compile Include="Cryptography\HashCalculator.cs" />
+    <Compile Include="Vurdalakov\CRC32.cs" />
+    <Compile Include="Vurdalakov\CRC32Managed.cs" />
+    <Compile Include="SharedControlsPleaseWaitControl.xaml.cs">
+      <DependentUpon>sharedcontrolspleasewaitcontrol.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="sharedcontrols\pleasewaitcontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

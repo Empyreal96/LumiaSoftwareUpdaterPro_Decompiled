@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\ProgramData\Microsoft\Lumia Software Updater Pro\Bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53D11362-6992-4E9D-8BF3-6320E703829E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.IdentityModel.Clients.ActiveDirectory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>2.16.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.IdentityModel.Clients.ActiveDirectory</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdalIdHelper.cs" />
+    <Compile Include="AcquireTokenHandlerBase.cs" />
+    <Compile Include="AcquireTokenByRefreshTokenHandler.cs" />
+    <Compile Include="AcquireTokenInteractiveHandler.cs" />
+    <Compile Include="AcquireTokenNonInteractiveHandler.cs" />
+    <Compile Include="AcquireTokenSilentHandler.cs" />
+    <Compile Include="AdalException.cs" />
+    <Compile Include="AdalIdParameter.cs" />
+    <Compile Include="AdalServiceException.cs" />
+    <Compile Include="AdalSilentTokenAcquisitionException.cs" />
+    <Compile Include="AdalUserMismatchException.cs" />
+    <Compile Include="AuthorityValidationType.cs" />
+    <Compile Include="AuthenticationContext.cs" />
+    <Compile Include="AuthenticationParameters.cs" />
+    <Compile Include="AuthenticationResult.cs" />
+    <Compile Include="AuthorityType.cs" />
+    <Compile Include="Authenticator.cs" />
+    <Compile Include="AuthenticatorTemplate.cs" />
+    <Compile Include="AuthenticatorTemplateList.cs" />
+    <Compile Include="AuthorizationStatus.cs" />
+    <Compile Include="AuthorizationResult.cs" />
+    <Compile Include="Base64UrlEncoder.cs" />
+    <Compile Include="CallState.cs" />
+    <Compile Include="ClientKey.cs" />
+    <Compile Include="ClientMetricsEndpointType.cs" />
+    <Compile Include="ClientMetrics.cs" />
+    <Compile Include="AdalError.cs" />
+    <Compile Include="AdalErrorMessage.cs" />
+    <Compile Include="XmlNamespace.cs" />
+    <Compile Include="DateTimeHelper.cs" />
+    <Compile Include="EncodingHelper.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="IHttpWebRequestFactory.cs" />
+    <Compile Include="HttpWebRequestFactory.cs" />
+    <Compile Include="IHttpWebRequest.cs" />
+    <Compile Include="HttpWebRequestWrapper.cs" />
+    <Compile Include="HttpWebResponseFactory.cs" />
+    <Compile Include="IHttpWebResponse.cs" />
+    <Compile Include="HttpWebResponseWrapper.cs" />
+    <Compile Include="IRequestCreationHelper.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MexPolicy.cs" />
+    <Compile Include="MexParser.cs" />
+    <Compile Include="NetworkPlugin.cs" />
+    <Compile Include="TokenResponse.cs" />
+    <Compile Include="IdToken.cs" />
+    <Compile Include="OAuth2Response.cs" />
+    <Compile Include="OAuthParameter.cs" />
+    <Compile Include="OAuthGrantType.cs" />
+    <Compile Include="OAuthResponseType.cs" />
+    <Compile Include="OAuthReservedClaim.cs" />
+    <Compile Include="IdTokenClaim.cs" />
+    <Compile Include="OAuthAssertionType.cs" />
+    <Compile Include="OAuthRequestedTokenUse.cs" />
+    <Compile Include="OAuthHeader.cs" />
+    <Compile Include="OAuthError.cs" />
+    <Compile Include="OAuthValue.cs" />
+    <Compile Include="PromptValue.cs" />
+    <Compile Include="PromptBehavior.cs" />
+    <Compile Include="RequestCreationHelper.cs" />
+    <Compile Include="RequestParameters.cs" />
+    <Compile Include="TokenCacheNotification.cs" />
+    <Compile Include="TokenCache.cs" />
+    <Compile Include="TokenCacheItem.cs" />
+    <Compile Include="TokenSubjectType.cs" />
+    <Compile Include="TokenCacheKey.cs" />
+    <Compile Include="TokenCacheNotificationArgs.cs" />
+    <Compile Include="UserAssertion.cs" />
+    <Compile Include="UserAuthType.cs" />
+    <Compile Include="UserCredential.cs" />
+    <Compile Include="UserIdentifierType.cs" />
+    <Compile Include="UserIdentifier.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserRealmDiscoveryResponse.cs" />
+    <Compile Include="WsTrustRequest.cs" />
+    <Compile Include="WsTrustResponse.cs" />
+    <Compile Include="AcquireTokenByAuthorizationCodeHandler.cs" />
+    <Compile Include="AcquireTokenOnBehalfHandler.cs" />
+    <Compile Include="AdalTrace.cs" />
+    <Compile Include="AcquireTokenForClientHandler.cs" />
+    <Compile Include="ClientAssertion.cs" />
+    <Compile Include="ClientAssertionCertificate.cs" />
+    <Compile Include="ClientCredential.cs" />
+    <Compile Include="CryptographyHelper.cs" />
+    <Compile Include="JsonWebToken.cs" />
+    <Compile Include="JsonWebTokenConstants.cs" />
+    <Compile Include="PlatformSpecificHelper.cs" />
+    <Compile Include="StaTaskScheduler.cs" />
+    <Compile Include="WebUIFactory.cs" />
+    <Compile Include="Internal\IWebUI.cs" />
+    <Compile Include="Internal\IWebUIFactory.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
